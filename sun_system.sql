@@ -1,4 +1,3 @@
-BEGIN;
 
 CREATE TYPE LOCATION AS (
     x FLOAT,
@@ -8,7 +7,7 @@ CREATE TYPE LOCATION AS (
 
 CREATE TABLE sun_systems (
     system_id SERIAL PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
+    name VARCHAR(255) UNIQUE NOT NULL,
     location LOCATION,
     description TEXT
 );
@@ -79,4 +78,3 @@ CREATE TABLE planets_arguments (
     correctness_level DEGREE
 );
 
-COMMIT;
