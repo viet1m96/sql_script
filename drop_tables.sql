@@ -1,10 +1,7 @@
 SET search_path TO :schema_name;
-DO $$ 
-DECLARE
-    r RECORD;
-BEGIN
-    FOR r IN (SELECT tablename FROM pg_tables WHERE schemaname = 's415129') LOOP
-        EXECUTE 'DROP TABLE IF EXISTS ' || quote_ident(r.tablename) || ' CASCADE';
-    END LOOP;
-END $$;
-
+DROP TABLE sun_systems CASCADE;
+DROP TABLE planets CASCADE;
+DROP TABLE characters CASCADE;
+DROP TABLE arguments CASCADE;
+DROP TABLE characters_arguments CASCADE;
+DROP TABLE planets_arguments CASCADE;
