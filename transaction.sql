@@ -1,3 +1,4 @@
+SET search_path TO :schema_name;
 DO $$
 BEGIN
     INSERT INTO sun_systems (name, location, description) VALUES

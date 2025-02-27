@@ -1,3 +1,4 @@
+SET search_path TO :schema_name;
 DO $$ 
 DECLARE
     r RECORD;

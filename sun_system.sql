@@ -1,3 +1,5 @@
+SET search_path TO :schema_name;
+
 
 CREATE TYPE LOCATION AS (
     x FLOAT,
